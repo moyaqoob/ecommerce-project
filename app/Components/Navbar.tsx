@@ -22,7 +22,7 @@ export function Navbar(){
             </div>
           
                 <div className="flex gap-2 text-brown-600 text-md hidden  sm:block">
-                    <ul className="flex  space-x-4">
+                    <ul className="flex  space-x-4 ">
                     <Link href="/Home">
                         <li 
                         className="scale-95 hover:underline decoration-[2px]">Home</li>
@@ -32,7 +32,6 @@ export function Navbar(){
                     </Link>
                     <Link href="/About">
                         <li className="scale-100 hover:underline ">About</li>
-                    
                     </Link>
                        <Link href="/Contact">
                         <li className="hover:underline ">Contact</li>
