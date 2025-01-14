@@ -21,7 +21,7 @@ export function Navbar(){
                 </Link>
             </div>
           
-                <div className="flex gap-2 text-brown-600 text-md hidden  sm:block">
+                <div className="flex gap-2 text-brown-600 text-md hidden items-center sm:block">
                     <ul className="flex  space-x-4 ">
                     <Link href="/Home">
                         <li 
@@ -46,9 +46,9 @@ export function Navbar(){
                         <Image src={SearchImg} width={20} height={10} alt=""/>
                    </a>
 
-                   <a href="/Signin">
+                   {/* <a href="/Signin">
                         <Image src={ProfileImg} width={20} height={10} alt=""/>
-                   </a>
+                   </a> */}
                    <a href="/Cart">
                         <Image src={CartImg} width={20} height={10} alt=""/>
                    </a>

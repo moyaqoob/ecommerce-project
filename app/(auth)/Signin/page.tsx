@@ -29,7 +29,7 @@ const page = () => {
                         Forgot your password?
                       </a>
                       <a onClick={(e)=>{
-                        window.location.href = '/Spignup'
+                        window.location.href = '/Signup'
                       }}>
                         Create your account
                       </a>

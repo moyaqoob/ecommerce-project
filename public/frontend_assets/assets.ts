@@ -73,6 +73,7 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import { StaticImageData } from 'next/image'
 export const assets = {
     logo,
     hero_img,
@@ -94,7 +95,21 @@ export const assets = {
     cross_icon
 }
 
-export const products = [
+
+export interface ProductType {
+    _id: string,
+    name:string,
+    description:string,
+    price:number,
+    image:StaticImageData[],
+    category:string,
+    subCategory:string,
+    sizes : string[],
+    date:number,
+    bestseller : boolean
+}
+
+export const products:ProductType[] = [
     {
         _id: "aaaaa",
         name: "Women Round Neck Cotton Top",
