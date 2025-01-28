@@ -101,15 +101,15 @@ export interface ProductType {
     name:string,
     description:string,
     price:number,
-    image:StaticImageData[],
+    image:StaticImageData[] ,
     category:string,
     subCategory:string,
     sizes : string[],
     date:number,
     bestseller : boolean
-}
+}[]
 
-export const products:ProductType[] = [
+export const products:ProductType[]=[
     {
         _id: "aaaaa",
         name: "Women Round Neck Cotton Top",

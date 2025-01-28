@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./Components/Navbar";
-
+import {  Lato as PlayFont  } from "next/font/google";
+import { Footer } from "./Components/footer";
+import { products } from "@/public/frontend_assets/assets";
+import {  ShopContextProvider } from "./context/ShopContext";
+import Layout from "./(root)/layout";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,6 +16,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const playFont = PlayFont({
+  style : ["normal"],
+  subsets : ["latin"],
+  weight:"400"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +36,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar/>
-       <main>{children} </main>
+        className={`${playFont.className} ${geistSans.className} px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]  `}>
+       <main>
+        <ShopContextProvider>
+
+          {children}
+
+        </ShopContextProvider>
+
+        
+        </main>
       </body>
     </html>
   );

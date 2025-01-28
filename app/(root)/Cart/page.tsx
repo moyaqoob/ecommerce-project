@@ -9,11 +9,7 @@ export default function Cart(){
     // const {products,currency,delivery_fee} = useShopContext(); 
     return(
         <>
-         {products.map((product)=>(
-          <div key={product._id} className=''>
-            {product.name}
-          </div>
-         ))}
+         {products.map((product,index))}
         
         </>
     )

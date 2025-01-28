@@ -4,10 +4,16 @@ import { Navbar } from "./Components/Navbar";
 import { Route } from "next";
 import Home from "@/app/(root)/Home/page";
 import Page from "./(root)/page";
-export default function App() {
+import RootLayout from "./layout";
+import MainLayout from "./(root)/layout";
+export default function App({children} : {children:React.ReactNode}) {
   return (
     <>
-      <Page/>
+      <RootLayout>
+          <MainLayout>
+              {children}
+          </MainLayout>
+      </RootLayout>
     </>
   );
 }
